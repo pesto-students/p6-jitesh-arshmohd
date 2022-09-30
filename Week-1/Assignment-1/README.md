@@ -32,3 +32,34 @@
 - 6. UI Backend.
 - 7. JS Interpreter.
 - ![Example screenshot](./img/BrowserComponents.png)
+
+
+## c. Rendering engine and its use.
+- Its a software component that draws structured text from a document (HTML).
+- And then it formats it properly based on the given style declarations.
+- Examples of Rendering engines are : Blink, Gecko, EdgeHTML, WebKit.
+- ![Example screenshot](./img/RenderingEnginesFlow.png)
+
+## d. Parsers (HTML, CSS, etc).
+- It's a lightweight parser(HTML/CSS) written in C.
+- It allows applications to prepare an HTML document for rendering.
+- HTMLCSS parser is extremely portal.
+
+
+## e. Script Processors.
+- Script processors basically helps in defining High to low Order of Script process:
+- ![Example screenshot](./img/ScriptProcessing.png)
+
+
+## f. Tree construction.
+- Tree construction is a process in which browsers traverse like a tree traversal process via DOM tree, DOM's each node starting from at the root.
+- As it traverses DOM's each node, it also looks CSSOM rules and applies them, then emit visible node with content, computed styles, finally moving into Layout stage.
+![Example screenshot](./img/TreeConstruction2Layout.png)
+
+## g. Order of script processing.
+- 1. script tag head (high priority, blocks parsers) > 2. link reload or script async tag or script type = module async (high priority, interrupts parser)  > continue
+- 3. script async (high priority, interrupt parser) > 4. script defer (very low, runs after script tag at the end of body tag) > continue
+- 4. script tag at the end of body tag (low waits parser ends) > 5. script defer tag at the end of body ( very low, after body tag). continue
+- 5. link rel=prefetch + script in the next-page navigation ---> Depends on when an dhow the script is consumed.
+- ![Example screenshot](./img/ScriptProcessing.png)
+
