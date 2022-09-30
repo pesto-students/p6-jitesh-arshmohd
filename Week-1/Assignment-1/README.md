@@ -63,3 +63,14 @@
 - 5. link rel=prefetch + script in the next-page navigation ---> Depends on when an dhow the script is consumed.
 - ![Example screenshot](./img/ScriptProcessing.png)
 
+## h. Layout and Painting.
+- Once the render-tree which is the combination of CSSOM and DOM trees, layout computation starts.
+- Layout computation does the compute of exact position and size of each object within a respective viewport.
+- Final stage after the Layout is Painting also called as Rasterizing.
+- Paiting is basically converts each node in the render tree to actual prixels on the screen.
+- **** VVIMP If either DOM or CSSOM were modified you will have to repeat the whole process.
+- ![Example screenshot](./img/Layout2Paint.png)
+
+## Finally "How Browsers work in a single image":
+
+- ![Example screenshot](./img/HowBrowsersWork.png)
