@@ -49,3 +49,11 @@ button {
     display: flex;
     flex-direction: column;
 } */
+
+@media screen and (max-width: 600px)  {
+    .articles{
+        display: flex;
+        flex-direction: column;
+    }
+       
+}
